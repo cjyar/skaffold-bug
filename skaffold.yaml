@@ -1,0 +1,9 @@
+apiVersion: skaffold/v1alpha3
+kind: Config
+build:
+  artifacts:
+  - imageName: example/skaffold-spam
+deploy:
+  kubectl:
+    manifests:
+    - k8s/*

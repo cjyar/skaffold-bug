@@ -1,0 +1,20 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  labels:
+    run: spam
+  name: spam
+spec:
+  selector:
+    matchLabels:
+      run: spam
+  template:
+    metadata:
+      labels:
+        run: spam
+    spec:
+      containers:
+      - image: example/skaffold-spam
+        name: spam
+        command:
+        - ./spam
